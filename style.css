@@ -1,0 +1,133 @@
+* {
+    font-family: 'Helvetica', sans-serif;
+    outline: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    font-size: calc(10px + 0.4vh + 0.4vw);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 12fr;
+    background-color: #222222;
+    color: #dddddd
+}
+
+#container {
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    border: 4px solid #000000;
+    border-radius: 8px;
+}
+
+.controls {
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1em;
+}
+
+.controls button,
+.controls div {
+    font-size: 1em;
+    /*margin: 1vmin;*/
+}
+
+.controls button {
+    padding: 0.4em 1.6em;
+    border: 0;
+    border-radius: 12px;
+    background-color: #323232;
+    color: #dddddd
+}
+
+button:hover {
+    background-color: #181818;
+}
+
+button:active {
+    background-color: #424242;
+    color: #ffa700
+}
+
+label {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    width: 200px;
+}
+
+label div {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.range-hint {
+    font-size: 0.8em;
+
+}
+
+#game-over {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    padding: 0.2em 2rem;
+    background-color: #0000008f;
+    border-radius: 28px;
+    z-index: 2;
+}
+
+#game-over span {
+    font-size: 1rem;
+}
+
+/* range */
+
+input[type=range] {
+    height: 35px;
+    -webkit-appearance: none;
+    margin: 0 10px 0 0;
+    width: 100%;
+    background-color: unset;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #5E5E5E;
+    border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 28px;
+    background: #ffa700;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #5E5E5E;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life</title>
+<!--    <script defer src="script.js"></script>-->
+            <script defer src="class.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-over">
+    Game over!
+    <span>Click "Clear / Reset" to reset game</span>
+</div>
+
+<div class="controls">
+    <div>
+        Current epoch: <span id="epoch">0</span>
+    </div>
+    <label>
+        <span class="range-hint">Generation speed</span>
+        <div>
+            <input type="range"
+                   id="slider"
+                   min="40"
+                   max="2000"
+                   step="any"
+                   value="600">
+            <span id="speedometer">600ms</span>
+        </div>
+    </label>
+    <button id="start">Start</button>
+    <button id="stop">Stop / Pause</button>
+    <button id="clear">Clear / Reset</button>
+    <button id="random">Random</button>
+    <button id="default">Default</button>
+</div>
+
+<div id="container">
+    <canvas id="field"></canvas>
+</div>
+
+<!--<script src="script.js"></script>-->
+</body>
+</html>
