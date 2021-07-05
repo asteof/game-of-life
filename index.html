@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Life</title>
-<!--    <script defer src="script.js"></script>-->
-            <script defer src="class.js"></script>
     <link rel="stylesheet" href="style.css">
+<!--    <script defer src="class.js"></script>-->
+        <script defer src="script.js"></script>
 </head>
 <body>
 
@@ -18,8 +18,11 @@
     <div>
         Current epoch: <span id="epoch">0</span>
     </div>
-    <label>
-        <span class="range-hint">Generation speed</span>
+
+    <div>
+        <label for="slider" class="range-hint">
+            Generation speed
+        </label>
         <div>
             <input type="range"
                    id="slider"
@@ -29,7 +32,8 @@
                    value="600">
             <span id="speedometer">600ms</span>
         </div>
-    </label>
+    </div>
+
     <button id="start">Start</button>
     <button id="stop">Stop / Pause</button>
     <button id="clear">Clear / Reset</button>
@@ -42,5 +46,6 @@
 </div>
 
 <!--<script src="script.js"></script>-->
+<!--    <script src="class.js"></script>-->
 </body>
 </html>
