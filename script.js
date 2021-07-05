@@ -8,10 +8,10 @@ let grid;
 const cols = cellAmount;
 const rows = cellAmount;
 let resolution;
-let epoch = -1;
+let epoch = 0;
 let intervalDelay = 600;
 let gameIsRunning = null; //variable used as interval for easy setting and clearing
-let isDrawing = false;
+let isDrawing = false; //variable for continuous drawing, may be unused
 
 const createArray = (cols, rows) => {
     let array = new Array(cols);
@@ -181,7 +181,7 @@ const canvasClickHandler = (e) => {
 
     drawGrid(grid, ctx);
 }
-/**/
+/**
 const startDrawing = () => {
         if (!isDrawing)
             isDrawing = true;
@@ -252,10 +252,12 @@ window.addEventListener('resize', resizeCanvas);
 const canvas = document.getElementById('field');
 const ctx = canvas.getContext('2d');
 canvas.addEventListener('click', canvasClickHandler);
+/*
 canvas.addEventListener('mousedown', startDrawing)
 canvas.addEventListener('mouseup', finishDrawing)
 window.addEventListener('mouseup', finishDrawing)
 canvas.addEventListener('mousemove', canvasDrawHandler)
+/**/
 
 const startBtn = document.getElementById('start');
 startBtn.addEventListener('click', startBtnHandler);
